@@ -1,4 +1,4 @@
-package mx.unam.ciencias.edd.test;
+package mx.unam.ciencias.edd.proyecto2.test;
 
 import java.util.Random;
 import mx.unam.ciencias.edd.Arreglos;
