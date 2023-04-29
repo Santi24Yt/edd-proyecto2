@@ -54,25 +54,31 @@ public class ReadStream {
 
   static public Lista<String> words(BufferedReader in) {
     Lista<String> palabras = new Lista<String>();
-    String linea = null;
-    try {
-      linea = in.readLine();
-    } catch (IOException e) {}
-    while(linea != null) {
-      String[] words = linea.split("\\s+");
-      for(String w : words) {
-        /* Si se encuentra una palabra que inicie con #, entonces ignorar
-          el resto de las palabras en la linea */
-        if(w.startsWith("#"))
-          break;
-        if(w.length() > 0) {
-          palabras.agrega(w);
-        }
+    String palabra = "";
+    boolean comentario = false;
+    int charcode = -1;
+    try{
+      charcode = in.read();
+    }catch(IOException e) {}
+    while(charcode != -1) {
+      if((char)charcode == '#')
+        comentario = true;
+      if((""+(char)charcode).matches("\\s")) {
+        if(palabra != "")
+          palabras.agrega(palabra);
+        palabra = "";
+        if((""+(char)charcode).matches("\\R"))
+          comentario = false;
+      }else{
+        if(!comentario)
+          palabra += (char)charcode;
       }
-      try {
-        linea = in.readLine();
-      } catch (IOException e) {}
+      try{
+        charcode = in.read();
+      }catch(IOException e){}
     }
+    if(palabra != "")
+      palabras.agrega(palabra);
     return palabras;
   }
 

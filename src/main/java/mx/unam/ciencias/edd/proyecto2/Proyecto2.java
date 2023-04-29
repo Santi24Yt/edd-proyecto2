@@ -37,6 +37,8 @@ public class Proyecto2 {
       }
     }
 
+    palabras.forEach((w) -> System.out.println(w));
+
     String clase = palabras.eliminaPrimero();
 
     Lista<Integer> elementos = new Lista<Integer>();
