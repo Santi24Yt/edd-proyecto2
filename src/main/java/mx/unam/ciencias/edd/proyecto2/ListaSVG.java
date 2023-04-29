@@ -10,7 +10,7 @@ public class ListaSVG<T> {
   private int alto = 100;
 
   public ListaSVG(Lista<T> l) {
-    ancho = l.getElementos()*100 + l.getElementos()*80;
+    ancho = l.getElementos()*100 + (l.getElementos()-1)*80;
     svg += "<svg version='1.1' width='"+(ancho+4)+"' height='"+(alto+4)+"'>\n";
 
     int i = 0;

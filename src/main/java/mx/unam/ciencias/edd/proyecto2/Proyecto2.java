@@ -37,7 +37,17 @@ public class Proyecto2 {
       }
     }
 
+    if(palabras.esVacia()) {
+      System.err.println("Debes ingresar una clase válida y al menos un elemento");
+      System.exit(1);
+    }
+
     String clase = palabras.eliminaPrimero();
+
+    if(palabras.getElementos() < 1) {
+      System.err.println("Debes ingresar al menos un elemento");
+      System.exit(1);
+    }
 
     Lista<Integer> elementos = new Lista<Integer>();
     for(String w : palabras) {
