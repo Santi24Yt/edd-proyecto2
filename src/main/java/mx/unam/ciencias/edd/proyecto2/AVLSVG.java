@@ -18,7 +18,7 @@ public class AVLSVG<T extends Comparable<T>> {
     ancho = (1 << avl.altura()) * 2 * (radio+20);
     alto  = avl.altura() * 2 * radio + 2*radio + 50;
     svg += "<svg version='1.1' width='"+(ancho+4)+"' height='"+(alto+4)+"'>\n";
-    svg += "  <defs>" +
+    svg += "  <defs>\n" +
            "   <radialGradient id='sphere' cx='70%' cy='30%' r='70%'\n" +
            "   gradientUnits='objectBoundingBox' >\n" +
            "      <stop offset='0%' stop-color='#7679ff' />\n" +

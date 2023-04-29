@@ -34,7 +34,7 @@ public class GraficaSVG<T> {
     ancho = 2*radioGrande + 2*2*radio + 10;
     alto = ancho;
     svg += "<svg version='1.1' width='"+(ancho)+"' height='"+(alto)+"'>\n";
-    svg += "  <defs>" +
+    svg += "  <defs>\n" +
            "   <radialGradient id='sphere' cx='70%' cy='30%' r='70%'\n" +
            "   gradientUnits='objectBoundingBox' >\n" +
            "      <stop offset='0%' stop-color='#7679ff' />\n" +
