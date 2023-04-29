@@ -15,7 +15,7 @@ public class ABCSVG<T> {
   private String vertices = "";
 
   public ABCSVG(ArbolBinarioCompleto<T> abc) {
-    ancho = (1 << abc.altura()) * 2 * (radio+8);
+    ancho = (1 << abc.altura()) * 2 * (radio+8) - (1 << abc.altura()) * (10);
     alto  = abc.altura() * 2 * radio + 2*radio;
     svg += "<svg version='1.1' width='"+(ancho+4)+"' height='"+(alto+4)+"'>\n";
     svg += "  <defs>\n" +

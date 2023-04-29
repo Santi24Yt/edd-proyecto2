@@ -15,7 +15,7 @@ public class ABOSVG<T extends Comparable<T>> {
   private String vertices = "";
 
   public ABOSVG(ArbolBinarioOrdenado<T> abo) {
-    ancho = (1 << abo.altura()) * 2 * (radio+2);
+    ancho = (1 << abo.altura()) * 2 * (radio+2) - (1 << abo.altura()) * (1);
     alto  = abo.altura() * 2 * radio + 2*radio;
     svg += "<svg version='1.1' width='"+(ancho+4)+"' height='"+(alto+4)+"'>\n";
     svg += "  <defs>\n" +

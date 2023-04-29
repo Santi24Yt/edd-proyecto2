@@ -21,7 +21,7 @@ public class ARNSVG<T extends Comparable<T>> {
   private String colorArista = "#E6E6E6";
 
   public ARNSVG(ArbolRojinegro<T> arn) {
-    ancho = (1 << arn.altura()) * 2 * (radio+8);
+    ancho = (1 << arn.altura()) * 2 * (radio+8) - (1 << arn.altura()) * (10);
     alto  = arn.altura() * 2 * radio + 2*radio;
     svg += "<svg version='1.1' width='"+(ancho+4)+"' height='"+(alto+4)+"'>\n";
     svg += "  <defs>\n" +
