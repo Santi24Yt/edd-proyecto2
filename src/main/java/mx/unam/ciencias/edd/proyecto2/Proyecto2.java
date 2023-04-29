@@ -116,10 +116,12 @@ public class Proyecto2 {
         Iterator<Integer> it = elementos.iterator();
         while(it.hasNext()) {
           int elem1 = it.next();
-          g.agrega(elem1);
+          if(!g.contiene(elem1))
+            g.agrega(elem1);
           int elem2 = it.next();
           if(elem1 != elem2) {
-            g.agrega(elem2);
+            if(!g.contiene(elem2))
+              g.agrega(elem2);
             g.conecta(elem1, elem2);
           }
         }
