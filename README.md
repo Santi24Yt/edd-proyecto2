@@ -6,6 +6,8 @@ Proyecto 2: Representación gráfica de estructuras de datos
 
 ### Fecha de entrega: viernes 28 de abril, 2023
 
+Profesor: Canek Peláez Valdés
+
 Deben escribir un programa para graficar las estructuras de datos que hemos
 cubierto a lo largo del curso (hasta la práctica 6), utilizando SVG.
 
